@@ -1,6 +1,6 @@
-# tic80_export.sh
+# tic80-export
 
-A bash script that will help you with TIC-80 exports. This script will:
+A bash executable that will help you with TIC-80 exports. This script will:
 
 * Inline all your lua exports.
 * Optionally export the project from the CLI edition of TIC-80. 
@@ -47,8 +47,9 @@ You should be good to go.
 ## Usage
 
 1. Set your working directory to the TIC-80 working directory.
-2. Run the script as `./tic80_export.sh file` where `file` is the name of your .lua project without the extension.
+2. Run the script as `tic80-export file` where `file` is the name of your .lua project without the extension.
 3. Project will be exported to game_export.lua.
+4. Optionally, provide an export option as the second argument. This will require tic80 to be in your PATH.
 
 ## Caveats
 
