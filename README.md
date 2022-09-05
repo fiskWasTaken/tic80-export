@@ -2,7 +2,7 @@
 
 A bash script that should help you with TIC-80 exports. This is intended for .lua carts only available on the Pro version of TIC-80.
 
-TIC-80 currently won't flatten your lua includes. This means if you try to export your project, it won't include your imported modules. This script aims to provide a general-purpose solution that 
+TIC-80 currently won't flatten your lua includes. This means if you try to export your project, it won't include your imported modules. This script aims to provide a general-purpose solution that should help with the development of larger TIC-80 projects.
 
 ## Rationale
 
