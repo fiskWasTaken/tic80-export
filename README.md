@@ -55,4 +55,4 @@ You should be good to go.
 
 This will include EVERY library under the two directories configured. I probably won't change this, because:
 * You might be programatically including files for whatever reason.
-* TIC-80's code limits are so large, optimising for character count is largely irrevelant (unlike in Pico-8).
+* TIC-80's code limits are so large, optimising for character count is largely irrelevant (unlike in Pico-8).
