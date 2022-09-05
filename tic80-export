@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+if ! [ $1 ]; then
+ echo "Usage: tic80-export project_name [export_method]"
+ echo "Where project_name is your main .lua file without the extension."
+ exit
+fi
+
+if ! [ -x "$(command -v luacc)" ]; then
+ echo "luacc is not installed or is not in PATH. try:"
+ echo "luarocks install luacc"
+ exit
+fi
+
+if [ ! -f $1.lua ]; then
+ echo "Cannot find $1.lua."
+ exit
+fi
+
+echo "Including files from ./${1} and ./lib"
+includes_project=$(find $1 -name '*.lua' | tr '\n' ' ')
+includes_lib=$(find lib -name '*.lua' | tr '\n' ' ')
+
+includes="${includes_project}${includes_lib}"
+filtered=${includes//\.lua/""}
+filtered=${filtered//\.//""}
+echo "Including modules: ${filtered}"
+
+luacc -o $1_export.lua -i ./ -p 6 $1 $filtered
+
+if ! [ $? -eq 0 ]; then
+ echo "An error occurred during file concatenation; exiting."
+ exit
+fi
+
+if [ $2 ]; then
+ echo "Exporting..."
+else
+ echo "Exiting. Supply a second argument to export your project."
+ exit
+fi 
+
+if ! [ -x "$(command -v tic80)" ]; then
+ echo "Cannot export: tic80 is not in PATH."
+ exit
+fi
+
+tic80 --cli --cmd "load $1_export.lua & export $2 $1 & exit"
