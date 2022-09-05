@@ -2,12 +2,12 @@
 
 A bash executable that will help you with TIC-80 exports. This script will:
 
-* Inline all your lua exports.
+* Inline all your external .lua includes.
 * Optionally export the project from the CLI edition of TIC-80. 
 
 This is intended for .lua carts which are available on the Pro version of TIC-80.
 
-TIC-80 currently won't flatten your lua includes. This means if you try to export your project, it won't include your imported modules. This script aims to provide a general-purpose solution that should help with the development of larger TIC-80 projects.
+TIC-80 currently won't flatten your lua includes. This means if you try to export your project, it won't include your imported modules. This script aims to provide a general-purpose solution that should help with the development and release of larger TIC-80 projects.
 
 ## Rationale
 
