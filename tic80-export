@@ -36,7 +36,7 @@ fi
 if [ $2 ]; then
  echo "Exporting..."
 else
- echo "Exiting. Supply a second argument to export your project."
+ echo "File concatenation OK."
  exit
 fi 
 
