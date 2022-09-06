@@ -16,8 +16,7 @@ You may have came across [the instructions on the TIC-80 wiki](https://github.co
 ## Installation
 
 1. Install [luarocks](https://luarocks.org/)
-2. Download the script and put it in your TIC-80 working directory (or anywhere, really, put it in your PATH if you want).
-3. Ensure the script is executable (`chmod +x tic80-export`).
+2. Clone this repository and, preferably, somehow add tic80-export to your PATH.
 
 ## Assumptions
 
