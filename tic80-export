@@ -45,4 +45,4 @@ if ! [ -x "$(command -v tic80)" ]; then
  exit
 fi
 
-tic80 --cli --cmd "load $1_export.lua & export $2 $1 & exit"
+tic80 --fs="$(pwd)" --cli --cmd "load $1_export.lua & export $2 $1_$2 & exit"

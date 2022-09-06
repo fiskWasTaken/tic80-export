@@ -23,7 +23,7 @@ You may have came across [the instructions on the TIC-80 wiki](https://github.co
 
 For this script to work, these assumptions about your environment must be met:
 
-* All your project files are inside the default TIC-80 working directory.
+* Your project and any library subfolders are contained in the same directory.
 * Your game-specific libraries are inside a directory named without the .lua extension (e.g. `pacman.lua` would have those includes inside `pacman`). 
 * Your generic libraries are in a directory called `lib`.
 
@@ -46,7 +46,7 @@ You should be good to go.
 
 ## Usage
 
-1. Set your working directory to the TIC-80 working directory.
+1. Open the working directory for your project.
 2. Run the script as `tic80-export file` where `file` is the name of your .lua project without the extension.
 3. Project will be exported to game_export.lua.
 4. Optionally, provide an export option as the second argument. This will require tic80 to be in your PATH.
